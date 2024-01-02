@@ -24,5 +24,23 @@ let booleanIsLoggedIn = Boolean(isLoggedIn);
 let ranNum = 55
 
 let numberInString = String(ranNum);
-console.log(numberInString);
-console.log(typeof numberInString);
+// console.log(numberInString);
+// console.log(typeof numberInString);
+
+
+// ************************ (Operations) **********************
+
+// console.log(1 + `2`);
+// console.log(`1` + 2);
+// console.log(1 + 1 +`2`);
+// console.log(`1` + 1 + 2);
+
+// whenever a string appears in à conversion then the remaining part of the conversion will be in string 
+// all elements before string will be added if its a number 
+
+// console.log(+true);
+// console.log(+"");
+
+let gameCounter = 100
+++gameCounter;
+console.log(gameCounter);
