@@ -23,11 +23,11 @@ let myObj = {
     lastName: `macharla`
 }
 
-let myFunction = function(){
+let myFunction = function func(){
     console.log(`hello world`);
 }
 
 
 console.table([myarray, myObj]);
 
-console.log(myFunction);
+myFunction();
