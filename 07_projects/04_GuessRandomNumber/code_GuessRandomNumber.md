@@ -208,3 +208,5 @@ function playAgain(game){
     })
 }
 ```
+
+![image](https://github.com/macharshan/javascript/assets/117523543/1872085a-9707-4355-848d-ab0a100283e4)
