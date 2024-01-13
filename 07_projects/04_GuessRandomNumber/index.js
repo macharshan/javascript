@@ -47,6 +47,7 @@ function compareNumber(num){
         numbersGuessed(num)
     } else {
         msg(`you have guessed it right`)
+        endGame()
     }
 }
 
@@ -85,6 +86,7 @@ function playAgain(game){
         randomNumber = Math.round((Math.random()*100)+1)
         myArray = []
         count = 1
+        result.innerHTML = ``
         guessedNumbers.innerHTML = ``
         remainingChances.innerHTML = `${10}` 
         playGame = true
