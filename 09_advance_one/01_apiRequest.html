@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: #efefef;">
+    <main>
+        <!-- <label for="profileUrl">Profile Url
+            <input type="text" id="profileUrl" placeholder="github profile url ">
+        </label> -->
+        <button id="start">start</button>
+        <ul>
+            <li id="name" style="list-style: none;"></li>
+            <li id="username" style="list-style: none;"></li>
+            </li>
+        </ul>
+    </main>
+
+</body>
+
+<script>
+    // const profileUrl = document.querySelector(`#profileUrl`).value;
+    const profileUrl = `https://api.github.com/users/macharshan`
+    const start = document.querySelector(`#start`)
+    const main = document.querySelector(`main`)
+    let name = document.querySelector(`#name`)
+    let username = document.querySelector(`#username`)
+    const xhr = new XMLHttpRequest();
+
+    start.addEventListener(`click`, function () {
+        console.log(profileUrl)
+        xhr.open(`GET`, profileUrl);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            console.log(xhr.readyState);
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(xhr.responseText);
+                console.log(data);
+                name.innerText = `${data.name}`
+                username.innerText = `${data.login}`
+            }
+        }
+    })
+</script>
+
+</html>
