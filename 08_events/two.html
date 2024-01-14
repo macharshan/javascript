@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+
+<body style="background-color: #212121;  color: #efefef;">
+    <h1 id="name">harsha Vardhan</h1>
+    <button>stop</button>
+</body>
+
+<script>
+    const name = document.querySelector(`#name`)
+
+    const changeName = setTimeout(() => {
+        name.textContent = `macharshan`
+    }, 2000)
+
+    const stop = document.querySelector(`button`)
+
+    stop.addEventListener(`click`, () => {
+        clearTimeout(changeName);
+    })
+</script>
+
+</html>

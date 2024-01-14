@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: #efefef;">
+    <ul id="contents">
+        <li>
+            <h1 id="firstName">harsha</h1>
+        </li>
+        <li>
+            <h1 id="middleName">vardhan</h1>
+        </li>
+        <li>
+            <h1 id="lastName">macharla</h1>
+        </li>
+        <li>
+            <h1 id="userName">macharshan</h1>
+        </li>
+        <li><a id="page" href="https://www.google.com">Google</a></li>
+    </ul>
+</body>
+
+<script>
+    // type, target, preventDefault, stoppropogation, toElement
+    // clientx clienty screenX screenY 
+    // srcElement curretTarget
+    // altkey shiftkey ctrlkey keycode
+
+    // addEventListener(type, callBackFunction, bubbling up/capture)
+
+    const contents = document.querySelector(`#contents`)
+    contents.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        console.log(e);
+        console.log(e.target.tagName);
+
+        if (e.target.tagName === `H1`) {
+            const removeIt = e.target.parentNode
+
+            // removeIt.remove()
+            removeIt.parentNode.removeChild(removeIt)
+        }
+
+    }, false)
+
+</script>
+
+</html>
