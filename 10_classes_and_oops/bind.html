@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bind</title>
+</head>
+
+<body>
+    <button>button clicked</button>
+</body>
+
+<script>
+    class react {
+        constructor() {
+            this.library = `react`
+            this.server = `https://localhost:3000`
+
+            document
+                .querySelector(`button`)
+                .addEventListener(`click`, this.handleClick.bind(this))
+            // bind will attach the data to the method that is called to access the data from the constructor
+        }
+        handleClick() {
+            console.log(`button Clicked`);
+            console.log(this.server);
+        }
+    }
+
+    const app = new react()
+
+    // ehen any new function is added then the to get access all acces we should create new instance
+</script>
+
+</html>
